@@ -1,11 +1,9 @@
 {
   "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -16,11 +14,21 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "isolatedModules": false,
+    "noEmit": false,
+    "jsx": "react",
+    "types": ["node", "jest", "lodash", "react", "react-dom"],
+    "baseUrl": "src/",
+    "paths": {
+      "@components/*": ["Components/*"],
+      "@modules/*": ["Modules/*"],
+      "@pages/*": ["Pages/*"],
+      "@utils/*": ["utils/*"],
+      "@hooks/*": ["utils/Hooks/*"],
+      "@theme": ["Theme"],
+      "@theme/*": ["Theme/*"],
+      "@redux/*": ["Redux/*"]
+    }
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }

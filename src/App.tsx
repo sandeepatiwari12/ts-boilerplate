@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material';
 
-function App() {
+// Custom Components
+import Sidenav, { DrawerHeader } from './Components/Sidenav';
+import Toolbar from './Components/Toolbar';
+import theme from './Theme';
+import Main from './Modules/Main';
+import { useSelector } from 'react-redux';
+import { RootState } from './Redux/store';
+// Routes (Login)
+import LoginRoutes from './Routes/LoginRoutes';
+// Routes (Auth)
+import AuthRoutes from './Routes/AuthRoutes';
+
+const App = () => {
+  const { isAuthorized } = useSelector((state: RootState) => state.auth);
+  console.log('isAuthorized', isAuthorized);
+
+  const [open, setOpen] = React.useState<boolean>(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Box sx={{ display: 'flex' }}>
+        <Toolbar authorized={isAuthorized} open={open} toggleDrawer={() => setOpen(!open)} />
+        {isAuthorized && <Sidenav open={open} />}
+        <Box component="main" sx={{ flexGrow: 1 }}>
+          <Main open={open}>
+            <DrawerHeader />
+            {isAuthorized ? <AuthRoutes /> : <LoginRoutes />}
+          </Main>
+        </Box>
+      </Box>
+    </ThemeProvider>
   );
-}
-
+};
 export default App;

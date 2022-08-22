@@ -1,0 +1,51 @@
+export const navItems = [
+  {
+    name: 'Dashboard',
+    path: '/dashboard',
+    class: 'arz-home2',
+    inactiveIcon: 'dashboard_inactive.png',
+    activeIcon: 'dashboard_active.png',
+  },
+  {
+    name: 'Analytics',
+    path: '/analytics',
+    class: 'arz-stats-dots',
+    inactiveIcon: 'dashboard_inactive.png',
+    activeIcon: 'dashboard_active.png',
+  },
+  {
+    name: 'Catalogue',
+    path: '/catalogue',
+    class: 'arz-books',
+    inactiveIcon: 'inventory_white.png',
+    activeIcon: 'inventory_active.png',
+  },
+  {
+    name: 'Orders',
+    path: '/my-orders',
+    class: 'arz-cart',
+    inactiveIcon: 'sent_inactive.png',
+    activeIcon: 'sent_active.png',
+  },
+  {
+    name: 'Deals',
+    path: '/deals-request',
+    class: 'arz-bullhorn',
+    inactiveIcon: 'discount-white.png',
+    activeIcon: 'discount.png',
+  },
+  {
+    name: 'Payments',
+    path: '/payments',
+    class: 'arz-credit-card',
+    inactiveIcon: 'payment_inactive.png',
+    activeIcon: 'payment_active.png',
+  },
+  {
+    name: 'Profile',
+    path: '/profile',
+    class: 'arz-profile',
+    inactiveIcon: 'profile_inactive.png',
+    activeIcon: 'profile_active.png',
+  },
+] as const;

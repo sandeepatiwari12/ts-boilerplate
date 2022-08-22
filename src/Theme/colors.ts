@@ -1,0 +1,46 @@
+const colors = {
+  primary: '#7753F8',
+  secondary: 'rgba(119, 83, 248, 0.6)',
+
+  primaryShades: ['#f2edff'],
+  transparent: 'transparent',
+  orange: '#FE8400',
+  orangeShades: ['#fff8d1', '#ffecda'],
+  darkOrange: '#f37217',
+  green: '#7CD420',
+  greenShades: ['#defeeb'],
+  darkGreen: '#55b32f',
+  red: '#ec5050',
+  darkRed: '#ce4444',
+  pinkishResd: '#F2335D',
+  blue: '#418CC9',
+  darkBlue: '#1a7bcb',
+  lightBlue: '#12A5EC',
+  lightGray: '#f9f7ff',
+  gray: '#E5E5E5',
+  darkGray: '#999595',
+  geryBgShade: '#F2F1F3',
+  white: '#FFFFFF',
+  black: '#261B50',
+  lightBlack: '#605D70',
+  blackBG: '#2C2633',
+  yellow: '#FFCC00',
+  purpleDark: '#1E1640',
+  purpleLight: '#F3EFFF',
+  blackShades: ['#605D70', '#2C2633', '#7d7694'],
+  secondaryShades: ['#eae5ff'],
+  purpleShades: ['rgba(119, 83, 248, 0.4)', 'rgba(119, 83, 248, 0.15)'],
+  toolbar: '#EFEBFE',
+  border: '#EEEAFD',
+  title: 'rgba(38, 27, 80, 0.7)',
+
+  // for dark mode
+  darkBG: '#202124',
+  sectionBG: '#36373a',
+  darkText: '#F5F5F7',
+  // for light mode
+  lightBG: '#f9f8ff',
+  lightText: '#2E0509',
+} as const;
+
+export default colors;
