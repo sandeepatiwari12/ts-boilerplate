@@ -1,7 +1,7 @@
 # React Typescript Boilerplate.
 
 This project is the boilerplate to start a new project it comes with several configurations.
-  ## Technologies.
+  ## Technologies & Documentation.
    Technologies  | Documentation
    ------------- | -------------
    React         | https://reactjs.org/
@@ -12,9 +12,13 @@ This project is the boilerplate to start a new project it comes with several con
    Webpack       | https://webpack.js.org/
     
   ## Steps to run the project on local server.
-      yarn install
-      yarn dev
-   ### http://localhost:8080
-
-  ## Steps to build the project in production mode.
-      yarn build:prod
+  Command  | Description
+  ------------- | -------------
+  yarn or yarn install | To install all required dependencies and devDependencies.
+  yarn dev | To start the local server ion development mode.
+  yarn build:prod  | To build the project in production mode.
+  
+   
+## it's time to open browser.
+   ### http://localhost:8080 
+   
