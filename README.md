@@ -1,4 +1,4 @@
-# React Typescript Boilerplate.
+# React-typescript boilerplate.
 
 This project is the boilerplate to start a new project it comes with several configurations.
 
